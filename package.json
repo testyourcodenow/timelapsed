@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest test/"
   },
-  "keywords": [],
+  "keywords": ["time","microformat", "dates", "duration", "time notation"],
   "author": "Shaka Paul",
   "license": "MIT",
   "devDependencies": {
