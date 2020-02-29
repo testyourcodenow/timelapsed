@@ -5,26 +5,31 @@ const MINUTE = 60;
 const HOUR = 3600;
 const DAY = 86400;
 const WEEK = 604800;
+const MONTH = 2629800;
 const YEAR = String(new Date().getYear()).substr(1);
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const MONTHSL = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const LONG = {
     NOW: "just now",
-    MIN: " min ago",
-    MINS: " mins ago",
+    MIN: " minute ago",
+    MINS: " minutes ago",
     HOUR: " hour ago",
     HOURS: " hours ago",
     DAY: "yesterday",
-    DAYS: " days ago"
+    DAYS: " days ago",
+    WEEK: ' week ago',
+    WEEKS: ' weeks ago'
 };
 const MID = {
       NOW: "just now",
-      MIN: "mn",
+      MIN: "min",
       MINS: "mns",
       HOUR: "hr",
       HOURS: "hrs",
       DAY: "dy",
-      DAYS: "dys"
+      DAYS: "dys",
+      WEEK: 'wk ago',
+      WEEKS: 'wks ago'
 };
 const SHORT = {
       NOW: "just now",
@@ -33,7 +38,9 @@ const SHORT = {
       HOUR: "h",
       HOURS: "h",
       DAY: "d",
-      DAYS: "d"
+      DAYS: "d",
+      WEEK: ' wk',
+      WEEKS: ' wks'
 };
 
 class TimeLapsed{
@@ -113,9 +120,9 @@ class TimeLapsed{
         }
         
         let postTime = undefined;
-        if (secondsLapsed <= MINUTE) {
+        if (secondsLapsed < MINUTE) {
             postTime = timestrings.NOW;
-        }else if (secondsLapsed > MINUTE && secondsLapsed < HOUR) {
+        }else if (secondsLapsed >= MINUTE && secondsLapsed < HOUR) {
             postTime = secondsLapsed / MINUTE;
             postTime = this.floorTimeCalc(postTime);
             if (postTime === 1) {
@@ -123,7 +130,7 @@ class TimeLapsed{
             }else{
                 postTime += timestrings.MINS;
             }
-        }else if (secondsLapsed > HOUR && secondsLapsed < DAY) {
+        }else if (secondsLapsed >= HOUR && secondsLapsed < DAY) {
             postTime = secondsLapsed / HOUR;
             postTime = this.floorTimeCalc(postTime);
             if (postTime === 1) {
@@ -131,16 +138,27 @@ class TimeLapsed{
             }else{
                 postTime += timestrings.HOURS;
             }
-        }else if (secondsLapsed > DAY && secondsLapsed < WEEK) {
+        }else if (secondsLapsed >= DAY && secondsLapsed < WEEK) {
             postTime = secondsLapsed / DAY;
             postTime = this.floorTimeCalc(postTime);
             if (postTime === 1) {
                 if (timestrings === LONG)
                     postTime = timestrings.DAY;
                 else
-                postTime += timestrings.DAY;
+                    postTime += timestrings.DAY;
             }else{
                 postTime += timestrings.DAYS;
+            }
+        }else if (secondsLapsed >= WEEK && secondsLapsed < MONTH) {
+            postTime = secondsLapsed / WEEK;
+            postTime = this.floorTimeCalc(postTime);
+            if (postTime === 1) {
+                if (timestrings === LONG)
+                    postTime += timestrings.WEEK;
+                else
+                    postTime += timestrings.WEEK;
+            }else{
+                postTime += timestrings.WEEKS;
             }
         }else{
             if (type === 'dateStrStr') {
