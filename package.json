@@ -1,7 +1,7 @@
 {
   "name": "timelapsed",
   "version": "1.0.2",
-  "description": "Timelapsed is a JavaScript/NodeJs module that makes it easy to support fuzzy timestamps (e.g. \"4 minutes ago\" or \"1 day ago\")",
+  "description": "Timelapsed is a NodeJs module that makes it easy to support fuzzy timestamps (e.g. \"4 minutes ago\" or \"yesterday\")",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,8 @@
     "microformat",
     "dates",
     "duration",
-    "time notation"
+    "fuzzy time notation",
+    "fuzzy duration notation"
   ],
   "author": "Shaka Paul",
   "license": "MIT",

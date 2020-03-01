@@ -24,7 +24,7 @@ const TimeLapsed = {
         DAYS: "dys"
   },
   SHORT: {
-        NOW: "just now",
+        NOW: "now",
         MIN: "m",
         MINS: "m",
         HOUR: "h",

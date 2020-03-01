@@ -36,3 +36,4 @@
 // console.log(TimeLapsed.fromTimestamp(1582972637984));
 // console.log(TimeLapsed.fromTimestamp(1582972637984, notation="twitter"));
 // console.log(TimeLapsed.fromTimestamp(1582972637984, notation='mid'));
+

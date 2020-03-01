@@ -32,15 +32,15 @@ const MID = {
       WEEKS: 'wks ago'
 };
 const SHORT = {
-      NOW: "just now",
+      NOW: "now",
       MIN: "m",
       MINS: "m",
       HOUR: "h",
       HOURS: "h",
       DAY: "d",
       DAYS: "d",
-      WEEK: ' wk',
-      WEEKS: ' wks'
+      WEEK: 'wk',
+      WEEKS: 'wks'
 };
 
 class TimeLapsed{

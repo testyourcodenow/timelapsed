@@ -7,7 +7,7 @@ test('just now', () => {
 
 test('just now twitter notation', () => {
   const duration = TimeLapsed.fromTimestamp(Date.now(), notation='twitter');
-  expect(duration).toBe('just now');
+  expect(duration).toBe('now');
 });
 
 test('just now mid notation', () => {
