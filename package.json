@@ -1,6 +1,6 @@
 {
   "name": "timelapsed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,13 @@
   "scripts": {
     "test": "jest test/"
   },
-  "keywords": ["time","microformat", "dates", "duration", "time notation"],
+  "keywords": [
+    "time",
+    "microformat",
+    "dates",
+    "duration",
+    "time notation"
+  ],
   "author": "Shaka Paul",
   "license": "MIT",
   "devDependencies": {
