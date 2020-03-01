@@ -1,4 +1,4 @@
-const TimeLapsed = require('../src/timeLapsed');
+const TimeLapsed = require('../index');
 
 test('just now', () => {
   const duration = TimeLapsed.fromTimestamp(Date.now());

@@ -16,14 +16,14 @@ for *datestrings* eg "2019-01-02T21:00:00.000Z" *string*
 >use `TimeLapsed.fromDateString()`
 
 #### parameters
->`notation (default = 'lng')` *string*
+`notation (default = 'lng')` *string*
 - *twitter*
     >"now", "m", "m", "h", "h", "d", "d", "wk", "wks"
 - *mid*
-    >"just now", "mn", "mns", "hr", "hrs", "dy", "dys", "wk ago", "wks ago"
+    >"just now", "mn", "mns", "hr", "hrs", "dy", "dys", "wk", "wks"
 - *lng*
     >"just now", "minute ago", "minutes ago", "hour ago", "hours ago", "yesterday", "days ago", "week ago", "weeks ago".
 
->`unsafe (dafault = true)` *boolean*
+`unsafe (dafault = true)` *boolean*
 - will throw an error if set to true and the timestamp or datestring is invalid.
 - will return 'N/A' if set to false and the timestamp or datestring is invalid.
