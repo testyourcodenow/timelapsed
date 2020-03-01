@@ -1,7 +1,7 @@
 {
   "name": "timelapsed",
   "version": "1.0.1",
-  "description": "",
+  "description": "Timelapsed is a JavaScript/NodeJs module that makes it easy to support fuzzy timestamps (e.g. \"4 minutes ago\" or \"1 day ago\")",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -20,5 +20,14 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^25.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testyourcodenow/timelapsed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/testyourcodenow/timelapsed/issues"
+  },
+  "homepage": "https://github.com/testyourcodenow/timelapsed#readme"
 }
