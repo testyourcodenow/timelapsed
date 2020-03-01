@@ -185,3 +185,37 @@ test('3 weeks ago long notation', () => {
   const duration = TimeLapsed.fromTimestamp(Date.now() - 3000 * 60 * 60 * 24 * 7, notation='lng');
   expect(duration).toBe('3 weeks ago');
 });
+
+test('will return N/A when passed invalid timestamp if unsafe is set to false', () => {
+  const duration = TimeLapsed.fromTimestamp('1529385554545xfgg', notation="twitter", unsafe=false);
+  expect(duration).toBe('N/A');
+});
+
+test('will return N/A when passed invalid datestring if unsafe is set to false', () => {
+  const duration = TimeLapsed.fromDateString('g2017-11-07 15:58:42.125836', notation="twitter", unsafe=false);
+  expect(duration).toBe('N/A');
+});
+
+test('will throw an Error when passed invalid timestamp if unsafe is set to true(default)', () => {
+  expect(() => {
+    TimeLapsed.fromTimestamp('1529385554545xfgg')
+  }).toThrow();
+});
+
+test('will throw an Error when passed invalid timestamp if unsafe is set to true', () => {
+  expect(() => {
+    TimeLapsed.fromTimestamp('1529385554545xfgg', notation='mid', unsafe=true);
+  }).toThrow();
+});
+
+test('will throw an Error when passed invalid timestamp if unsafe is set to true(default)', () => {
+  expect(() => {
+    TimeLapsed.fromDateString('g2017-11-07 15:58:42.125836');
+  }).toThrow();
+});
+
+test('will throw an Error when passed invalid timestamp if unsafe is set to true', () => {
+  expect(() => {
+    TimeLapsed.fromDateString('g2017-11-07 15:58:42.125836', notation='lng', unsafe=true);
+  }).toThrow();
+});
