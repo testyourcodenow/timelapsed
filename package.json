@@ -1,6 +1,6 @@
 {
   "name": "timelapsed",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Timelapsed is a NodeJs module that makes it easy to support fuzzy timestamps (e.g. \"4 minutes ago\" or \"yesterday\")",
   "main": "index.js",
   "directories": {
@@ -20,9 +20,11 @@
   "author": "Shaka Paul",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
     "jest": "^25.1.0"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/testyourcodenow/timelapsed.git"
