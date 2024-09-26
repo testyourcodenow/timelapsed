@@ -1,7 +1,7 @@
 {
   "name": "timelapsed",
-  "version": "2.0.0",
-  "description": "Timelapsed is a NodeJs module that makes it easy to support fuzzy timestamps (e.g. \"4 minutes ago\" or \"yesterday\")",
+  "version": "2.0.1",
+  "description": "timelapsed is a NodeJs module that makes it easy to support fuzzy timestamps (e.g. \"2min, 2 hrs ago, 4 minutes ago\" or \"yesterday\")",
   "main": "index.js",
   "directories": {
     "test": "test"
